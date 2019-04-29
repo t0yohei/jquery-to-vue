@@ -1,0 +1,10 @@
+{
+  "core": {
+    "workingDir": ".reg",
+    "actualDir": ".reg-actual",
+    "thresholdRate": 0,
+    "ximgdiff": {
+      "invocationType": "client"
+    }
+  }
+}
