@@ -1,0 +1,27 @@
+{
+  "name": "jquery-to-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^24.7.1",
+    "jest-puppeteer": "^4.1.1",
+    "jquery": "^3.4.0",
+    "puppeteer": "^1.15.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t0yohei/jquery-to-vue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t0yohei/jquery-to-vue/issues"
+  },
+  "homepage": "https://github.com/t0yohei/jquery-to-vue#readme"
+}
