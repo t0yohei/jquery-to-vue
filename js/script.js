@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import './mount'
 import $ from 'jquery';
 import { readData } from './reader';
@@ -19,14 +20,12 @@ function updateAll() {
 
   EventBus.$emit(UPDATE_NEXT_TODO_TEXT, nextTodoText);
   EventBus.$emit(UPDATE_TODO_COUNT, count);
-
-  toggleTodoList(count);
 }
 
 $(function() {
   $('#addTodo').on('click', function() {
     addTodo();
-    updateAll();
+    Vue.nextTick(() => updateAll());
   });
 
   $('#todoList').on('input', '.todo:eq(0)', function() {
@@ -34,8 +33,8 @@ $(function() {
   });
 
   $('#todoList').on('click', '.delete', function() {
-    removeTodo(this);
-    updateAll();
+    removeTodo(this, $('#todoList').find('.delete').index(this));
+    Vue.nextTick(() => updateAll());
   });
 
   updateAll();
