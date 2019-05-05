@@ -9,13 +9,18 @@ import {
   addTodo,
   removeTodo
 } from './writer';
+import EventBus, {
+  UPDATE_NEXT_TODO_TEXT,
+  UPDATE_TODO_COUNT
+} from './EventBus';
 
 function updateAll() {
   const { count, nextTodoText } = readData();
 
-  writeTodoCount(count);
+  EventBus.$emit(UPDATE_NEXT_TODO_TEXT, nextTodoText);
+  EventBus.$emit(UPDATE_TODO_COUNT, count);
+
   toggleTodoList(count);
-  toggleTodoEmpty(count);
 }
 
 $(function() {
